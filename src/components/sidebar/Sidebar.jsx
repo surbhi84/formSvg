@@ -17,7 +17,7 @@ export const Sidebar = () => {
             <div className='step-num flex flex-center' >{stepNum}</div>
             <div className='step-div'>
               <div className='step-number'>STEP {stepNum}</div>
-              <div className='step-title'>{stepTitle}</div>
+              <div className='step-title text-med'>{stepTitle}</div>
             </div>
           </div>
         ))}

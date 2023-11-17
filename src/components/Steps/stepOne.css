@@ -1,0 +1,39 @@
+.input-field {
+  border: 1px solid var(--cool-gray);
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 8px;
+  width: 100%;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 1px solid var(--purplish-blue);
+}
+
+.input-error {
+  border: 1px solid var(--strawberry-red);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+  flex-grow: 1;
+}
+
+.btn-primary {
+  padding: 12px 20px;
+  width: fit-content;
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  background-color: var(--marine-blue);
+  font-family: "UbuntuMed";
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}

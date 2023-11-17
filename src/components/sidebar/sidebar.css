@@ -18,7 +18,7 @@
   height: 32px;
   width: 32px;
   border: 1.5px solid var(--white);
-  font-weight: 600;
+  font-family: "UbuntuMed";
 }
 
 .step-num-active {
@@ -28,15 +28,11 @@
   border: 1.5px solid var(--light-blue);
   background-color: var(--light-blue);
   color: var(--marine-blue);
-  font-weight: 600;
+  font-family: "UbuntuMed";
 }
 
 .step-number {
   color: var(--pastel-blue);
   font-size: small;
   margin-bottom: 4px;
-}
-
-.step-title {
-  font-weight: 600;
 }
