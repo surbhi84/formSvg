@@ -1,0 +1,12 @@
+.thankyou-div {
+  height: 100%;
+  width: 508px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  line-height: 1.5;
+  text-align: center;
+  font-size: large;
+}
