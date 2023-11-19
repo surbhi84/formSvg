@@ -80,6 +80,16 @@ body {
   margin-left: 24px;
 }
 
+/* CURSOR */
+
+.cur-p {
+  cursor: pointer;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
 /* COMMON CLASSES */
 
 .card-padding {

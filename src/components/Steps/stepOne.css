@@ -97,5 +97,8 @@
   border-radius: 4px;
 }
 
-.addon-cb:checked {
+
+.hr-break {
+  height: 1px;
+  background-color: var(--light-gray);
 }
