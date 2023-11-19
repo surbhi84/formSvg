@@ -1,1 +1,6 @@
-export const EDITDETAILS = "EDITDETAILS";
+export const EDITDETAILS = "EditDetails";
+export const REMOVEADDON = "RemoveAddon";
+export const CHANGEPERIOD = "ChangePeriod";
+
+
+

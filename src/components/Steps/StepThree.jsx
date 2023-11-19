@@ -1,25 +1,29 @@
 import React from "react";
-import { EDITDETAILS } from "../../hooks/dataReducer/types";
+import { EDITDETAILS, REMOVEADDON } from "../../hooks/dataReducer/types";
 
 const Addons = [
   {
     title: "Online service",
     detail: "Access to multiplayer games",
-    price: "+$1/mo",
+    monthlyPrice: "+$1/mo",
+    yearlyPrice: "+$10/mo",
   },
   {
     title: "Larger storage",
     detail: "Extra 1TB of cloud save",
-    price: "+$2/mo",
+    monthlyPrice: "+$2/mo",
+    yearlyPrice: "+$20/mo",
   },
   {
     title: "Customizable Profile",
     detail: "Custom theme on your profile",
-    price: "+$2/mo",
+    monthlyPrice: "+$2/mo",
+    yearlyPrice: "+$20/mo",
   },
 ];
 
 export const StepThree = ({ setStep, accDetails, detailsDispatch }) => {
+  console.log({ accDetails });
   return (
     <div className='flex flex-col flex-grow card-padding mw'>
       <h1 className='text-mb text-bold m-0'>Pick add-ons</h1>
@@ -28,7 +32,7 @@ export const StepThree = ({ setStep, accDetails, detailsDispatch }) => {
       </div>
 
       <div className='flex flex-col gap-16 addon-container'>
-        {Addons.map(({ title, detail, price }) => (
+        {Addons.map(({ title, detail, monthlyPrice, yearlyPrice }) => (
           <div className='flex flex-center addon-card' key={title}>
             <input
               type='checkbox'
@@ -37,16 +41,25 @@ export const StepThree = ({ setStep, accDetails, detailsDispatch }) => {
                 if (e.target.checked)
                   detailsDispatch({
                     type: EDITDETAILS,
-                    payload: { addOns: [...accDetails.addOns, title] },
+                    payload: {
+                      addOns: [...accDetails.addOns, { title, price : accDetails.period === "monthly" ? monthlyPrice : yearlyPrice }],
+                    },
+                  });
+                else
+                  detailsDispatch({
+                    type: REMOVEADDON,
+                    payload: { title },
                   });
               }}
-              checked={accDetails?.addOns.includes(title)}
+              checked={accDetails?.addOns.some((item) => item.title === title)}
             />
             <div className='ml-24'>
               <div className='text-mb text-med addon-title'>{title}</div>
               <div className='text-cg'>{detail}</div>
             </div>
-            <div className='text-pb text-med ml-auto'>{price}</div>
+            <div className='text-pb text-med ml-auto'>
+              {accDetails.period === "monthly" ? monthlyPrice : yearlyPrice}
+            </div>
           </div>
         ))}
       </div>

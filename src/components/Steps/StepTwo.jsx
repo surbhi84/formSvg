@@ -1,26 +1,26 @@
 import { useState } from "react";
 import "./stepOne.css";
 import Switch from "react-switch";
-import { EDITDETAILS } from "../../hooks/dataReducer/types";
+import { CHANGEPERIOD, EDITDETAILS } from "../../hooks/dataReducer/types";
 
 const plans = [
   {
     icon: "assets/images/icon-arcade.svg",
     title: "Arcade",
-    monthlyPrice: "9",
-    yearlyPrice: "90",
+    monthlyPrice: "$9/mo",
+    yearlyPrice: "$90/yr",
   },
   {
     icon: "assets/images/icon-advanced.svg",
     title: "Advanced",
-    monthlyPrice: "12",
-    yearlyPrice: "120",
+    monthlyPrice: "$12/mo",
+    yearlyPrice: "$120/yr",
   },
   {
     icon: "assets/images/icon-pro.svg",
     title: "Pro",
-    monthlyPrice: "15",
-    yearlyPrice: "150",
+    monthlyPrice: "$15/mo",
+    yearlyPrice: "$150/yr",
   },
 ];
 
@@ -30,10 +30,10 @@ export const StepTwo = ({ setStep, accDetails, detailsDispatch }) => {
   function handleChangePeriod() {
     if (period === "monthly") {
       setPeriod("yearly");
-      detailsDispatch({ type: EDITDETAILS, payload: { period: "yearly" } });
+      detailsDispatch({ type: CHANGEPERIOD, payload: "yearly" });
     } else {
       setPeriod("monthly");
-      detailsDispatch({ type: EDITDETAILS, payload: { period: "monthly" } });
+      detailsDispatch({ type: CHANGEPERIOD, payload: "monthly" });
     }
   }
   console.log({ period, accDetails });
@@ -51,7 +51,7 @@ export const StepTwo = ({ setStep, accDetails, detailsDispatch }) => {
             key={title}
             onClick={() => {
               detailsDispatch({
-                type: "EDITDETAILS",
+                type: EDITDETAILS,
                 payload: { plan: title },
               });
             }}
@@ -59,8 +59,11 @@ export const StepTwo = ({ setStep, accDetails, detailsDispatch }) => {
             <img src={icon} />
             <div className='text-mb text-bold title-pc'>{title}</div>
             <div className='text-cg text-reg mt-10 text-med'>
-              ${monthlyPrice}/mo
+              {period === "monthly" ? monthlyPrice : yearlyPrice}
             </div>
+            {period === "yearly" && (
+              <div className='text-mb mt-10 text-med'>2 months free</div>
+            )}
           </div>
         ))}
       </div>
@@ -85,7 +88,7 @@ export const StepTwo = ({ setStep, accDetails, detailsDispatch }) => {
 
       <div className='flex mt-auto flex-center'>
         <div
-          className='text-cg text-med'
+          className='text-cg text-med cur-p'
           onClick={() => {
             setStep((p) => p - 1);
           }}
