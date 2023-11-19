@@ -1,5 +1,5 @@
 import React from "react";
-import { EDITDETAILS, REMOVEADDON } from "../../hooks/dataReducer/types";
+import { AddOnCard } from "./AddOnCard";
 
 const Addons = [
   {
@@ -23,7 +23,7 @@ const Addons = [
 ];
 
 export const StepThree = ({ setStep, accDetails, detailsDispatch }) => {
-  console.log({ accDetails });
+
   return (
     <div className='flex flex-col flex-grow card-padding mw'>
       <h1 className='text-mb text-bold m-0'>Pick add-ons</h1>
@@ -32,50 +32,14 @@ export const StepThree = ({ setStep, accDetails, detailsDispatch }) => {
       </div>
 
       <div className='flex flex-col gap-16 addon-container'>
-        {Addons.map(({ title, detail, monthlyPrice, yearlyPrice }) => (
-          <div className='flex flex-center addon-card' key={title}>
-            <input
-              type='checkbox'
-              className='addon-cb'
-              onChange={(e) => {
-                if (e.target.checked)
-                  detailsDispatch({
-                    type: EDITDETAILS,
-                    payload: {
-                      addOns: [
-                        ...accDetails.addOns,
-                        {
-                          title,
-                          price:
-                            accDetails.period === "monthly"
-                              ? monthlyPrice
-                              : yearlyPrice,
-                        },
-                      ],
-                    },
-                  });
-                else
-                  detailsDispatch({
-                    type: REMOVEADDON,
-                    payload: { title },
-                  });
-              }}
-              checked={accDetails?.addOns.some((item) => item.title === title)}
-            />
-            <div className='ml-24'>
-              <div className='text-mb text-med addon-title'>{title}</div>
-              <div className='text-cg'>{detail}</div>
-            </div>
-            <div className='text-pb text-med ml-auto'>
-              +${accDetails.period === "monthly" ? monthlyPrice : yearlyPrice}
-            </div>
-          </div>
+        {Addons.map((addon) => (
+          <AddOnCard addon={addon} accDetails={accDetails} detailsDispatch={detailsDispatch} key={addon.title}/>
         ))}
       </div>
 
       <div className='flex mt-auto flex-center'>
         <div
-          className='text-cg text-med'
+          className='text-cg text-med cur-p'
           onClick={() => {
             setStep((p) => p - 1);
           }}
@@ -86,7 +50,6 @@ export const StepThree = ({ setStep, accDetails, detailsDispatch }) => {
         <button
           type='submit'
           className='btn-primary ml-auto'
-          // disabled={}
           onClick={() => {
             setStep((p) => p + 1);
           }}

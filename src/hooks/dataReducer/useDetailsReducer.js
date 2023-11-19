@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { CHANGEPERIOD, EDITDETAILS, REMOVEADDON } from "./types";
+import { ADDADDON, CHANGEPERIOD, EDITDETAILS, REMOVEADDON } from "./types";
 
 export const useDetailsReducer = () => {
   const initialAccDetails = {
@@ -8,13 +8,16 @@ export const useDetailsReducer = () => {
     phone: "",
     plan: { title: "Arcade", price: "9/mo" },
     period: "monthly",
-    addOns: [{ title: "Online service", price: "1/mo" }],
+    addOns: [],
   };
 
   const getDetails = (state, { type, payload }) => {
     switch (type) {
       case EDITDETAILS: {
         return { ...state, ...payload };
+      }
+      case ADDADDON: {
+        return { ...state, addOns: [...state.addOns, payload] };
       }
       case REMOVEADDON: {
         const tempAddOns = [
