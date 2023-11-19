@@ -12,15 +12,38 @@ export const StepFour = ({ setStep, accDetails, detailsDispatch }) => {
         <div className='flex flex-center'>
           <div>
             <div className='text-mb text-bold'>
-              {accDetails.plan.title}({accDetails.period})
+              {accDetails.plan.title} ({accDetails.period})
             </div>
             <div className='underline-text text-cg'>Change</div>
           </div>
           <div className='text-mb text-bold ml-auto'>
-            {accDetails.plan.price}
+            ${accDetails.plan.price}
           </div>
         </div>
+
         <div className='hr-break' />
+
+        {accDetails.addOns.map(({ title, price }, index) => (
+          <div className='flex summary-row' key={title}>
+            <div className='text-cg'>{title}</div>
+            <div className='text-mb ml-auto'>+${price}</div>
+          </div>
+        ))}
+      </div>
+      <div className='flex mt-32 total-container'>
+        <div className='text-cg'>
+          Total(
+          {`${accDetails.period === "monthly" ? "per month" : "per year"}`})
+        </div>
+
+        <div className='text-pb text-bold ml-auto addon-title'>
+          $
+          {accDetails?.addOns.reduce(
+            (a, i) => a + Number(i.price?.split("/")[0]),
+            0
+          ) + Number(accDetails?.plan.price.split("/")[0])}
+          {`${accDetails.period === "monthly" ? "/mo" : "/yr"}`}
+        </div>
       </div>
 
       <div className='flex mt-auto flex-center'>
@@ -36,7 +59,6 @@ export const StepFour = ({ setStep, accDetails, detailsDispatch }) => {
         <button
           type='submit'
           className='btn-primary ml-auto'
-          // disabled={}
           onClick={() => {
             setStep(0);
           }}

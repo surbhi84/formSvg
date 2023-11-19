@@ -97,8 +97,22 @@
   border-radius: 4px;
 }
 
-
 .hr-break {
   height: 1px;
   background-color: var(--light-gray);
+  margin: 24px 0;
+}
+
+.summary-div {
+  margin-top: 36px;
+  padding: 24px 20px 0 24px;
+  background-color: var(--magnolia);
+  border-radius: 8px;
+}
+
+.summary-row {
+  margin: 20px 0;
+}
+.total-container {
+  padding: 0 24px;
 }

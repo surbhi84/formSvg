@@ -5,20 +5,20 @@ const Addons = [
   {
     title: "Online service",
     detail: "Access to multiplayer games",
-    monthlyPrice: "+$1/mo",
-    yearlyPrice: "+$10/mo",
+    monthlyPrice: "1/mo",
+    yearlyPrice: "10/mo",
   },
   {
     title: "Larger storage",
     detail: "Extra 1TB of cloud save",
-    monthlyPrice: "+$2/mo",
-    yearlyPrice: "+$20/mo",
+    monthlyPrice: "2/mo",
+    yearlyPrice: "20/mo",
   },
   {
     title: "Customizable Profile",
     detail: "Custom theme on your profile",
-    monthlyPrice: "+$2/mo",
-    yearlyPrice: "+$20/mo",
+    monthlyPrice: "2/mo",
+    yearlyPrice: "20/mo",
   },
 ];
 
@@ -42,7 +42,16 @@ export const StepThree = ({ setStep, accDetails, detailsDispatch }) => {
                   detailsDispatch({
                     type: EDITDETAILS,
                     payload: {
-                      addOns: [...accDetails.addOns, { title, price : accDetails.period === "monthly" ? monthlyPrice : yearlyPrice }],
+                      addOns: [
+                        ...accDetails.addOns,
+                        {
+                          title,
+                          price:
+                            accDetails.period === "monthly"
+                              ? monthlyPrice
+                              : yearlyPrice,
+                        },
+                      ],
                     },
                   });
                 else
@@ -58,7 +67,7 @@ export const StepThree = ({ setStep, accDetails, detailsDispatch }) => {
               <div className='text-cg'>{detail}</div>
             </div>
             <div className='text-pb text-med ml-auto'>
-              {accDetails.period === "monthly" ? monthlyPrice : yearlyPrice}
+              +${accDetails.period === "monthly" ? monthlyPrice : yearlyPrice}
             </div>
           </div>
         ))}

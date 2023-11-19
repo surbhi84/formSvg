@@ -1,5 +1,6 @@
 import { Field, Form, Formik } from "formik";
 import "./stepOne.css";
+import { EDITDETAILS } from "../../hooks/dataReducer/types";
 
 export const StepOne = ({ setStep, accDetails, detailsDispatch }) => {
   console.log({ accDetails });
@@ -93,7 +94,7 @@ export const StepOne = ({ setStep, accDetails, detailsDispatch }) => {
               // disabled={}
               onClick={() => {
                 detailsDispatch({
-                  type: "EDITDETAILS",
+                  type: EDITDETAILS,
                   payload: { ...props.values },
                 });
                 setStep((p) => p + 1);

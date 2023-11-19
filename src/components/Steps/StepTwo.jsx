@@ -7,20 +7,20 @@ const plans = [
   {
     icon: "assets/images/icon-arcade.svg",
     title: "Arcade",
-    monthlyPrice: "$9/mo",
-    yearlyPrice: "$90/yr",
+    monthlyPrice: "9/mo",
+    yearlyPrice: "90/yr",
   },
   {
     icon: "assets/images/icon-advanced.svg",
     title: "Advanced",
-    monthlyPrice: "$12/mo",
-    yearlyPrice: "$120/yr",
+    monthlyPrice: "12/mo",
+    yearlyPrice: "120/yr",
   },
   {
     icon: "assets/images/icon-pro.svg",
     title: "Pro",
-    monthlyPrice: "$15/mo",
-    yearlyPrice: "$150/yr",
+    monthlyPrice: "15/mo",
+    yearlyPrice: "150/yr",
   },
 ];
 
@@ -47,19 +47,26 @@ export const StepTwo = ({ setStep, accDetails, detailsDispatch }) => {
       <div className='flex gap-16'>
         {plans.map(({ icon, title, monthlyPrice, yearlyPrice }) => (
           <div
-            className={`${accDetails.plan === title && "active"} plan-card`}
+            className={`${
+              accDetails.plan.title === title && "active"
+            } plan-card`}
             key={title}
             onClick={() => {
               detailsDispatch({
                 type: EDITDETAILS,
-                payload: { plan: title },
+                payload: {
+                  plan: {
+                    title,
+                    price: period === "monthly" ? monthlyPrice : yearlyPrice,
+                  },
+                },
               });
             }}
           >
             <img src={icon} />
             <div className='text-mb text-bold title-pc'>{title}</div>
             <div className='text-cg text-reg mt-10 text-med'>
-              {period === "monthly" ? monthlyPrice : yearlyPrice}
+              ${period === "monthly" ? monthlyPrice : yearlyPrice}
             </div>
             {period === "yearly" && (
               <div className='text-mb mt-10 text-med'>2 months free</div>

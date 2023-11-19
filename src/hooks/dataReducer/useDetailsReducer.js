@@ -6,9 +6,9 @@ export const useDetailsReducer = () => {
     userName: "",
     email: "",
     phone: "",
-    plan: { title: "Arcade", price: "$9/mo" },
+    plan: { title: "Arcade", price: "9/mo" },
     period: "monthly",
-    addOns: [{ title: "Online service", price: "+$1/mo" }],
+    addOns: [{ title: "Online service", price: "1/mo" }],
   };
 
   const getDetails = (state, { type, payload }) => {
