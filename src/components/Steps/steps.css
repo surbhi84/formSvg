@@ -1,9 +1,12 @@
+.step-div{
+  min-width: 486px;
+}
+
 .input-field {
   border: 1px solid var(--light-gray);
   padding: 14px 12px;
   border-radius: 8px;
   margin-top: 8px;
-  width: 100%;
   outline: none;
   color: var(--marine-blue);
 }
@@ -26,7 +29,6 @@
   gap: 24px;
   margin-top: 32px;
   flex-grow: 1;
-  width: 424px;
 }
 
 .btn-primary {
@@ -77,7 +79,6 @@
 
 .addon-container {
   margin-top: 36px;
-  min-width: 478px;
 }
 
 .addon-card {
@@ -130,3 +131,6 @@
   font-size: medium;
   cursor: pointer;
 }
+
+/* Responsive css */
+

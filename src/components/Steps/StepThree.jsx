@@ -25,7 +25,7 @@ const Addons = [
 export const StepThree = ({ setStep, accDetails, detailsDispatch }) => {
 
   return (
-    <div className='flex flex-col flex-grow card-padding mw'>
+    <div className='flex flex-col flex-grow card-padding mw step-div'>
       <h1 className='text-mb text-bold m-0'>Pick add-ons</h1>
       <div className='text-cg text-reg mt-10'>
         Add-ons help enhance your gaming experience.

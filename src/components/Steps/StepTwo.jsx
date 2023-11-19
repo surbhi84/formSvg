@@ -38,7 +38,7 @@ export const StepTwo = ({ setStep, accDetails, detailsDispatch }) => {
   }
 
   return (
-    <div className='flex flex-col flex-grow card-padding'>
+    <div className='flex flex-col flex-grow card-padding step-div'>
       <h1 className='text-mb text-bold m-0'>Select your plan</h1>
       <div className='text-cg text-reg mt-10'>
         You have the option of monthly or yearly billing.

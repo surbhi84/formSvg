@@ -4,7 +4,7 @@ import { EDITDETAILS } from "../../hooks/dataReducer/types";
 
 export const StepOne = ({ setStep, accDetails, detailsDispatch }) => {
   return (
-    <div className='flex flex-col flex-grow card-padding'>
+    <div className='flex flex-col flex-grow card-padding step-div'>
       <h1 className='text-mb text-bold m-0'>Personal info</h1>
       <div className='text-cg text-reg mt-10'>
         Please provide your name, email address, and phone number.
