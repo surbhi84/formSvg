@@ -8,7 +8,7 @@ export const useDetailsReducer = () => {
     phone: "",
     plan: "Arcade",
     period: "monthly",
-    addOns: {},
+    addOns: ["Online service"],
   };
 
   const getDetails = (state, { type, payload }) => {
