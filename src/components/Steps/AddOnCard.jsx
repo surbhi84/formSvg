@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./stepOne.css";
+import "./steps.css";
 import { ADDADDON, REMOVEADDON } from "../../hooks/dataReducer/types";
 
 export const AddOnCard = ({

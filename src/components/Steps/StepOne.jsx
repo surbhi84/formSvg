@@ -1,5 +1,5 @@
 import { Field, Form, Formik } from "formik";
-import "./stepOne.css";
+import "./steps.css";
 import { EDITDETAILS } from "../../hooks/dataReducer/types";
 
 export const StepOne = ({ setStep, accDetails, detailsDispatch }) => {

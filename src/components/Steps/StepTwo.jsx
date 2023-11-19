@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./stepOne.css";
+import "./steps.css";
 import Switch from "react-switch";
 import { CHANGEPERIOD, EDITDETAILS } from "../../hooks/dataReducer/types";
 
