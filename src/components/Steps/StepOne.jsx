@@ -3,7 +3,6 @@ import "./stepOne.css";
 import { EDITDETAILS } from "../../hooks/dataReducer/types";
 
 export const StepOne = ({ setStep, accDetails, detailsDispatch }) => {
-  console.log({ accDetails });
   return (
     <div className='flex flex-col flex-grow card-padding'>
       <h1 className='text-mb text-bold m-0'>Personal info</h1>
@@ -57,7 +56,6 @@ export const StepOne = ({ setStep, accDetails, detailsDispatch }) => {
                 value={props.values.userName}
               />
             </div>
-            {console.log(props.values)}
 
             <div className='flex-col'>
               <label className='text-mb'>Email Address</label>

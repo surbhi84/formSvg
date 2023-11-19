@@ -36,7 +36,6 @@ export const StepTwo = ({ setStep, accDetails, detailsDispatch }) => {
       detailsDispatch({ type: CHANGEPERIOD, payload: "monthly" });
     }
   }
-  console.log({ period, accDetails });
 
   return (
     <div className='flex flex-col flex-grow card-padding'>
