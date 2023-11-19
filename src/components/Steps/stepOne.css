@@ -30,13 +30,14 @@
 }
 
 .btn-primary {
-  padding: 12px 20px;
+  padding: 16px 24px;
   width: fit-content;
   border-radius: 8px;
   border: none;
   color: var(--white);
   background-color: var(--marine-blue);
   font-family: "UbuntuMed";
+  font-size: medium;
   cursor: pointer;
 }
 
@@ -113,6 +114,19 @@
 .summary-row {
   margin: 20px 0;
 }
+
 .total-container {
   padding: 0 24px;
+}
+
+.btn-confirm {
+  padding: 16px 32px;
+  width: fit-content;
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  background-color: var(--purplish-blue);
+  font-family: "UbuntuMed";
+  font-size: medium;
+  cursor: pointer;
 }

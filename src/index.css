@@ -86,8 +86,12 @@ body {
   cursor: pointer;
 }
 
-.underline-text {
+.link-text {
   text-decoration: underline;
+}
+
+.link-text:hover {
+  color: var(--purplish-blue);
 }
 
 /* COMMON CLASSES */

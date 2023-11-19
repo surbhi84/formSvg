@@ -14,7 +14,7 @@ export const StepFour = ({ setStep, accDetails, detailsDispatch }) => {
             <div className='text-mb text-bold'>
               {accDetails.plan.title} ({accDetails.period})
             </div>
-            <div className='underline-text text-cg'>Change</div>
+            <div className='link-text text-cg cur-p'>Change</div>
           </div>
           <div className='text-mb text-bold ml-auto'>
             ${accDetails.plan.price}
@@ -48,7 +48,7 @@ export const StepFour = ({ setStep, accDetails, detailsDispatch }) => {
 
       <div className='flex mt-auto flex-center'>
         <div
-          className='text-cg text-med'
+          className='text-cg text-med cur-p'
           onClick={() => {
             setStep((p) => p - 1);
           }}
@@ -58,7 +58,7 @@ export const StepFour = ({ setStep, accDetails, detailsDispatch }) => {
 
         <button
           type='submit'
-          className='btn-primary ml-auto'
+          className='btn-confirm ml-auto'
           onClick={() => {
             setStep(0);
           }}
