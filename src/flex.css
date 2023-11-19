@@ -16,3 +16,7 @@
 .flex-grow {
   flex-grow: 1;
 }
+
+.gap-16 {
+  gap: 16px;
+}

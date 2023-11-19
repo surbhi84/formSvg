@@ -18,3 +18,11 @@
   align-items: center;
   flex-grow: 1;
 }
+
+.step-card > div {
+  min-width: 378px;
+}
+
+.mw {
+  min-width: 378px;
+}

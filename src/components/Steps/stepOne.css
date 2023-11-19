@@ -1,10 +1,15 @@
 .input-field {
-  border: 1px solid var(--cool-gray);
-  padding: 8px;
-  border-radius: 6px;
+  border: 1px solid var(--light-gray);
+  padding: 14px 12px;
+  border-radius: 8px;
   margin-top: 8px;
   width: 100%;
   outline: none;
+  color: var(--marine-blue);
+}
+
+.input-field::placeholder {
+  color: var(--cool-gray);
 }
 
 .input-field:focus {
@@ -21,6 +26,7 @@
   gap: 24px;
   margin-top: 32px;
   flex-grow: 1;
+  width: 424px;
 }
 
 .btn-primary {
@@ -36,4 +42,60 @@
 
 .btn-primary:hover {
   opacity: 0.9;
+}
+
+.title-pc {
+  margin-top: 48px;
+  font-size: large;
+}
+
+.plan-card {
+  margin-top: 32px;
+  border: 2px solid var(--light-gray);
+  padding: 16px;
+  min-width: 116px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.plan-card:hover {
+  border: 2px solid var(--purplish-blue);
+}
+
+.active {
+  border: 2px solid var(--purplish-blue);
+}
+
+.period-div {
+  background-color: var(--magnolia);
+  padding: 8px;
+  gap: 24px;
+  border-radius: 8px;
+  margin-top: 42px;
+}
+
+.addon-container {
+  margin-top: 36px;
+  min-width: 478px;
+}
+
+.addon-card {
+  border: 1px solid var(--purplish-blue);
+  padding: 16px 20px;
+  border-radius: 6px;
+}
+
+.addon-title {
+  font-size: large;
+  margin-bottom: 4px;
+}
+
+.addon-cb {
+  height: 20px;
+  width: 20px;
+  accent-color: var(---purplish-blue);
+  border-radius: 4px;
+}
+
+.addon-cb:checked {
 }

@@ -36,6 +36,10 @@ body {
   color: var(--cool-gray);
 }
 
+.text-pb {
+  color: var(--purplish-blue);
+}
+
 /* FONT-WEIGHTS */
 
 .text-reg {
@@ -62,6 +66,18 @@ body {
 
 .m-0 {
   margin: 0;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+.ml-24 {
+  margin-left: 24px;
 }
 
 /* COMMON CLASSES */
