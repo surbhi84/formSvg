@@ -19,6 +19,7 @@
   width: 32px;
   border: 1.5px solid var(--white);
   font-family: "UbuntuMed";
+  cursor: pointer;
 }
 
 .step-num-active {
@@ -29,6 +30,7 @@
   background-color: var(--light-blue);
   color: var(--marine-blue);
   font-family: "UbuntuMed";
+  cursor: pointer;
 }
 
 .step-number {
