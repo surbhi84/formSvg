@@ -26,7 +26,7 @@ export const useDetailsReducer = () => {
         return { ...state, addOns: tempAddOns };
       }
       case CHANGEPERIOD: {
-        return { ...state, addOns: [], period: payload };
+        return { ...state, plan: {}, addOns: [], period: payload };
       }
     }
   };
