@@ -51,6 +51,35 @@ function App() {
               detailsDispatch={detailsDispatch}
             />
           )}
+          <div className='btn-div'>
+            {step > 1 && (
+              <div
+                className='text-cg text-med cur-p'
+                onClick={() => {
+                  setStep((p) => p - 1);
+                }}
+              >
+                Go Back
+              </div>
+            )}
+            {step === 4 && (
+              <button
+                className='btn-confirm mt-auto ml-auto'
+                onClick={() => setStep(0)}
+              >
+                Confirm
+              </button>
+            )}
+
+            {step > 0 && step < 4 && (
+              <button
+                className='btn-primary mt-auto ml-auto'
+                onClick={() => setStep((p) => p + 1)}
+              >
+                Next Step
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>

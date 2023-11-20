@@ -43,7 +43,7 @@ export const StepTwo = ({ setStep, accDetails, detailsDispatch }) => {
       <div className='text-cg text-reg mt-10'>
         You have the option of monthly or yearly billing.
       </div>
-      <div className='flex gap-16'>
+      <div className='flex gap-16 pc-container'>
         {plans.map(({ icon, title, monthlyPrice, yearlyPrice }) => (
           <div
             className={`${
@@ -63,13 +63,15 @@ export const StepTwo = ({ setStep, accDetails, detailsDispatch }) => {
             }}
           >
             <img src={icon} />
-            <div className='text-mb text-bold title-pc'>{title}</div>
-            <div className='text-cg text-reg mt-10 text-med'>
-              ${period === "monthly" ? monthlyPrice : yearlyPrice}
+            <div>
+              <div className='text-mb text-bold title-pc'>{title}</div>
+              <div className='text-cg text-reg mt-10 text-med'>
+                ${period === "monthly" ? monthlyPrice : yearlyPrice}
+              </div>
+              {period === "yearly" && (
+                <div className='text-mb mt-10 text-med'>2 months free</div>
+              )}
             </div>
-            {period === "yearly" && (
-              <div className='text-mb mt-10 text-med'>2 months free</div>
-            )}
           </div>
         ))}
       </div>
@@ -92,7 +94,7 @@ export const StepTwo = ({ setStep, accDetails, detailsDispatch }) => {
         </div>
       </div>
 
-      <div className='flex mt-auto flex-center'>
+      <div className='flex mt-auto flex-center dis-none'>
         <div
           className='text-cg text-med cur-p'
           onClick={() => {

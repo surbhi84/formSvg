@@ -1,4 +1,3 @@
-// import { Field, Form, Formik } from "formik";
 import "./steps.css";
 import { EDITDETAILS } from "../../hooks/dataReducer/types";
 
@@ -19,7 +18,7 @@ export const StepOne = ({ setStep, accDetails, detailsDispatch }) => {
 
       <form className='form' onSubmit={() => {}}>
         <div className='flex-col'>
-          <label className='text-mb'>Name</label>
+          <label className='text-mb text-med'>Name</label>
           <input
             className='input-field text-med'
             type='name'
@@ -31,7 +30,7 @@ export const StepOne = ({ setStep, accDetails, detailsDispatch }) => {
         </div>
 
         <div className='flex-col'>
-          <label className='text-mb'>Email Address</label>
+          <label className='text-mb text-med'>Email Address</label>
 
           <input
             className='input-field text-med'
@@ -45,7 +44,7 @@ export const StepOne = ({ setStep, accDetails, detailsDispatch }) => {
 
         {/* {errors.email && touched.email && errors.email} */}
         <div className='flex-col'>
-          <label className='text-mb '>Phone Number</label>
+          <label className='text-mb text-med'>Phone Number</label>
 
           <input
             className='input-field text-med'

@@ -6,26 +6,26 @@ const Addons = [
     title: "Online service",
     detail: "Access to multiplayer games",
     monthlyPrice: "1/mo",
-    yearlyPrice: "10/mo",
+    yearlyPrice: "10/yr",
   },
   {
     title: "Larger storage",
     detail: "Extra 1TB of cloud save",
     monthlyPrice: "2/mo",
-    yearlyPrice: "20/mo",
+    yearlyPrice: "20/yr",
   },
   {
     title: "Customizable Profile",
     detail: "Custom theme on your profile",
     monthlyPrice: "2/mo",
-    yearlyPrice: "20/mo",
+    yearlyPrice: "20/yr",
   },
 ];
 
 export const StepThree = ({ setStep, accDetails, detailsDispatch }) => {
 
   return (
-    <div className='flex flex-col flex-grow card-padding mw step-div'>
+    <div className='flex flex-col flex-grow card-padding step-div'>
       <h1 className='text-mb text-bold m-0'>Pick add-ons</h1>
       <div className='text-cg text-reg mt-10'>
         Add-ons help enhance your gaming experience.
@@ -37,7 +37,7 @@ export const StepThree = ({ setStep, accDetails, detailsDispatch }) => {
         ))}
       </div>
 
-      <div className='flex mt-auto flex-center'>
+      <div className='flex mt-auto flex-center dis-none'>
         <div
           className='text-cg text-med cur-p'
           onClick={() => {

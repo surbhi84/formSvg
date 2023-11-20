@@ -21,7 +21,7 @@ export const Sidebar = ({ step, setStep }) => {
             >
               {stepNum}
             </div>
-            <div className='step-div'>
+            <div>
               <div className='step-number'>STEP {stepNum}</div>
               <div className='step-title text-med'>{stepTitle}</div>
             </div>

@@ -6,7 +6,7 @@
 
 .card {
   display: flex;
-  width: 65%;
+  min-width: 65%;
   background-color: var(--white);
   border-radius: 12px;
   padding: 16px;
@@ -19,10 +19,15 @@
   flex-grow: 1;
 }
 
-.step-card > div {
-  min-width: 378px;
-}
+/* RESPONSIVE CSS */
 
-.mw {
-  min-width: 378px;
+@media (min-width: 360px) and (max-width: 420px) {
+  .main {
+    align-items: flex-start !important;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
 }

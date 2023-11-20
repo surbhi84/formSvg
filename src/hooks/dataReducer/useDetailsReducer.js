@@ -6,7 +6,7 @@ export const useDetailsReducer = () => {
     userName: "",
     email: "",
     phone: "",
-    plan: { title: "Arcade", price: "9/mo" },
+    plan: {},
     period: "monthly",
     addOns: [],
   };

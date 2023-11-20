@@ -46,7 +46,7 @@ export const StepFour = ({ setStep, accDetails, detailsDispatch }) => {
         </div>
       </div>
 
-      <div className='flex mt-auto flex-center'>
+      <div className='flex mt-auto flex-center dis-none'>
         <div
           className='text-cg text-med cur-p'
           onClick={() => {

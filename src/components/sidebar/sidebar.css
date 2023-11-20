@@ -38,3 +38,34 @@
   font-size: small;
   margin-bottom: 4px;
 }
+
+/* RESPONSIVE CSS */
+
+@media (min-width: 360px) and (max-width: 420px) {
+  .sb-container {
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(/public/assets/images/bg-sidebar-mobile.svg);
+    height: 172px;
+    gap: 0px;
+    width: 100vw;
+    position: relative;
+    top: 0;
+  }
+
+  .step-num,
+  .step-num-active {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    font-size: smaller;
+    padding: 4px;
+    font-family: "UbuntuMed";
+  }
+
+  .step-title,
+  .step-number {
+    display: none;
+  }
+}
