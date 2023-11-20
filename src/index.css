@@ -99,3 +99,7 @@ body {
 .card-padding {
   padding: 48px 0 32px 0;
 }
+
+.pos-rel {
+  position: relative;
+}

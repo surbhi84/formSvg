@@ -23,6 +23,13 @@
   border: 1px solid var(--strawberry-red);
 }
 
+.err-msg {
+  position: absolute;
+  right: 0;
+  color: var(--strawberry-red);
+  font-weight: 600;
+}
+
 .form {
   display: flex;
   flex-direction: column;
