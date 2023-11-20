@@ -173,8 +173,8 @@
     width: 100vw;
     position: absolute;
     left: -16px;
-    bottom:calc(516px - 100vh);
     padding: 16px;
+    top: calc(100vh - 176px);
   }
 
   .pc-container {
