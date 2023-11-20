@@ -59,7 +59,6 @@ export const StepOne = ({ setStep, accDetails, detailsDispatch }) => {
           />
         </div>
 
-        {/* {errors.email && touched.email && errors.email} */}
         <div className='flex-col pos-rel'>
           <label className='text-mb text-med'>Phone Number</label>
           {showError.phone && (
@@ -76,8 +75,6 @@ export const StepOne = ({ setStep, accDetails, detailsDispatch }) => {
             onChange={handleChange}
           />
         </div>
-
-        {/* {errors.password && touched.password && errors.password} */}
 
         <div className='flex mt-auto btn-div'>
           <button
