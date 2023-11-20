@@ -7,7 +7,7 @@ const steps = [
   { stepNum: 4, stepTitle: "SUMMARY" },
 ];
 
-export const Sidebar = ({ step, setStep }) => {
+export const Sidebar = ({ step }) => {
   return (
     <>
       <div className='sb-container flex-col'>
@@ -17,7 +17,6 @@ export const Sidebar = ({ step, setStep }) => {
               className={`${
                 step === stepNum ? "step-num-active" : "step-num"
               }  flex flex-center`}
-              onClick={() => setStep(stepNum)}
             >
               {stepNum}
             </div>

@@ -16,7 +16,7 @@ function App() {
   return (
     <div className='main flex flex-center'>
       <div className='card'>
-        <Sidebar step={step} setStep={setStep} />
+        <Sidebar step={step} />
         <div className='step-card'>
           {step === 0 && <Thankyou />}
           {step === 1 && (
