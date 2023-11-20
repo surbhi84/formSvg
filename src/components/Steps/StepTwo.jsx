@@ -107,7 +107,7 @@ export const StepTwo = ({ setStep, accDetails, detailsDispatch }) => {
         <button
           type='submit'
           className='btn-primary ml-auto'
-          // disabled={}
+          disabled={!accDetails.plan.title}
           onClick={() => {
             setStep((p) => p + 1);
           }}
