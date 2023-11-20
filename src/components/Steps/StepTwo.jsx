@@ -94,7 +94,7 @@ export const StepTwo = ({ setStep, accDetails, detailsDispatch }) => {
         </div>
       </div>
 
-      <div className='flex mt-auto flex-center dis-none'>
+      <div className='flex mt-auto flex-center btn-div'>
         <div
           className='text-cg text-med cur-p'
           onClick={() => {

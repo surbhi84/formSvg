@@ -60,7 +60,7 @@ export const StepOne = ({ setStep, accDetails, detailsDispatch }) => {
         </div>
 
         {/* {errors.email && touched.email && errors.email} */}
-        <div className='flex-col  pos-rel'>
+        <div className='flex-col pos-rel'>
           <label className='text-mb text-med'>Phone Number</label>
           {showError.phone && (
             <div className='err-msg'> This field is required</div>
@@ -79,14 +79,9 @@ export const StepOne = ({ setStep, accDetails, detailsDispatch }) => {
 
         {/* {errors.password && touched.password && errors.password} */}
 
-        <div className='flex mt-auto dis-none'>
+        <div className='flex mt-auto btn-div'>
           <button
             className='btn-primary mt-auto ml-auto'
-            // disabled={
-            //   accDetails.userName === "" ||
-            //   accDetails.email === "" ||
-            //   accDetails.phone === ""
-            // }
             onClick={() => {
               if (accDetails.userName === "")
                 setShowError((p) => ({ ...p, userName: true }));

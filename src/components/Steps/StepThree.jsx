@@ -23,7 +23,6 @@ const Addons = [
 ];
 
 export const StepThree = ({ setStep, accDetails, detailsDispatch }) => {
-
   return (
     <div className='flex flex-col flex-grow card-padding step-div'>
       <h1 className='text-mb text-bold m-0'>Pick add-ons</h1>
@@ -33,11 +32,16 @@ export const StepThree = ({ setStep, accDetails, detailsDispatch }) => {
 
       <div className='flex flex-col gap-16 addon-container'>
         {Addons.map((addon) => (
-          <AddOnCard addon={addon} accDetails={accDetails} detailsDispatch={detailsDispatch} key={addon.title}/>
+          <AddOnCard
+            addon={addon}
+            accDetails={accDetails}
+            detailsDispatch={detailsDispatch}
+            key={addon.title}
+          />
         ))}
       </div>
 
-      <div className='flex mt-auto flex-center dis-none'>
+      <div className='flex mt-auto flex-center btn-div'>
         <div
           className='text-cg text-med cur-p'
           onClick={() => {
