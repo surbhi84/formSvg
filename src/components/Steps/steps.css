@@ -173,7 +173,7 @@
     width: 100vw;
     position: absolute;
     left: -16px;
-    bottom: -40vh;
+    bottom:calc(516px - 100vh);
     padding: 16px;
   }
 
