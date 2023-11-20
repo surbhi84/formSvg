@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Sidebar } from "./components/sidebar/Sidebar";
-import { StepTwo } from "./components/Steps/stepTwo";
+import { StepTwo } from "./components/Steps/StepTwo";
 import { StepOne } from "./components/Steps/StepOne";
 import { StepThree } from "./components/Steps/StepThree";
 import { StepFour } from "./components/Steps/StepFour";
