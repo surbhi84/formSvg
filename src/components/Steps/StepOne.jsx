@@ -10,7 +10,10 @@ export const StepOne = ({ setStep, accDetails, detailsDispatch }) => {
   });
 
   const handleChange = (e) => {
-    setShowError((p) => ({ ...p, [e.target.name]: false }));
+    setShowError((p) => ({
+      ...p,
+      [e.target.name]: e.target.value ? false : true,
+    }));
     detailsDispatch({
       type: EDITDETAILS,
       payload: { [e.target.name]: e.target.value },
